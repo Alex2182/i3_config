@@ -45,7 +45,7 @@ libsensors4-dev libiw-dev i3lock-fancy i3pystatus i3 fonts-font-awesome
 pip install -U pip setuptools
 pip install git+https://github.com/bastienleonard/pysensors.git basiciw xkbgroup
 ```
-# 5 Place [i3pystatus config file](https://github.com/Alex2182/i3_config/blob/main/i3status.py) to ~/.config/i3/i3status.py. Same for [i3 config file](https://github.com/Alex2182/i3_config/blob/main/config)
+# 5 Place [i3pystatus config file](https://github.com/Alex2182/i3_config/blob/main/i3status.py) to ~/.config/i3/. Same for [i3 config file](https://github.com/Alex2182/i3_config/blob/main/config)
 
 
 # 6 Dark theme by default I think it'll work only if install before i3 some other desktop
