@@ -2,21 +2,21 @@
 Config i3+i3status.py for quick start on new instalation (Debian based)
 
 
-# KEYBOARD CONFIGURATION FILE /etc/default/keyboard
+# KEYBOARD CONFIGURATION FILE [/etc/default/keyboard](https://github.com/Alex2182/i3_config/blob/main/keyboard)
 
 XKBLAYOUT="us" add ",ru"
 XKBOPTIONS="" add "grp:alt_shift_toggle"
 
 # test configuration
 ```bash
-setupcon
+sudo setupcon
 ```
 # make changes
 ```bash
-setupcon -k -f
+sudo setupcon -k -f
 ```
 # 2 Enable tap for laptops
-Make a new file 
+Make a new file [touchpad-tap.conf](https://github.com/Alex2182/i3_config/blob/main/touchpad_tap.conf)
 ```bash
 sudo nano /etc/X11/xorg.conf.d/touchpad-tap.conf
 ```
@@ -45,9 +45,11 @@ libsensors4-dev libiw-dev i3lock-fancy i3pystatus i3 fonts-font-awesome
 pip install -U pip setuptools
 pip install git+https://github.com/bastienleonard/pysensors.git basiciw xkbgroup
 ```
+# 5 Place [i3pystatus config file](https://github.com/Alex2182/i3_config/blob/main/i3status.py) to ~/.config/i3/i3status.py. Same for [i3 config file](https://github.com/Alex2182/i3_config/blob/main/config)
 
-# 5 Dark theme by default I think it'll work only if install before i3 some other desktop
-create file if not exists 
+
+# 6 Dark theme by default I think it'll work only if install before i3 some other desktop
+create file if not exists [settings.ini](https://github.com/Alex2182/i3_config/blob/main/settings.ini)
 ```bash
 nano ~/.config/gtk-3.0/settings.ini
 ```
