@@ -101,29 +101,11 @@ status.register("disk",
     on_leftclick="pcmanfm",
     format=" {avail} GB",)
 
-#status.register("text",
-#    text = requests.get('https://wttr.in/Tver?format=2').text.replace('\n',''),
-#    color="#ffffff")
 
 status.register("shell",
         format = "Tver {output}",
         command = "curl -k https://wttr.in/Tver?format=2",
         interval=600
 )
-
-#read_file WEATHER{
-#    format = “%content”
-#    path = “/home/abonin/.config/i3/wttr”
-#}
-
-#status.register("disk",
-#    hints = {"separator": False, "separator_block_width": 3},
-#    color='#ABB2BF',
-#    path="/",
-#    format=": {avail} GB",)
-
-#status.register('ping',
-#    format_disabled='',
-#    color='#61AEEE')
 
 status.run() 
