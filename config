@@ -223,13 +223,6 @@ bar {
     strip_workspace_numbers yes
     font pango:Hack, FontAwesome 12
     colors {
-#        background #010101
-#        statusline #e7dfd9
-#        separator  #081419
-#        focused_workspace  #2aa250 #073642 #eee895
-#        active_workspace   #073250 #859900 #839496
-#        inactive_workspace #010101 #002b36 #586e75
-#        urgent_workspace   #cb4b16 #dc322f #fdf6e3
             background #282A36
             statusline #F8F8F2
             separator  #44475A
