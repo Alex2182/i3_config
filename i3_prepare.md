@@ -1,13 +1,17 @@
-#1 KEYBOARD CONFIGURATION FILE /etc/default/keyboard
+# 1 KEYBOARD CONFIGURATION FILE /etc/default/keyboard
+
 XKBLAYOUT="us" add ",ru"
 XKBOPTIONS="" add "grp:alt_shift_toggle"
 
-#test configuration
+# test configuration
+```bash
 setupcon
-#make changes
+```
+# make changes
+```bash
 setupcon -k -f
-
-#2Enable tap
+```
+# 2 Enable tap
 #Make a new file at /etc/X11/xorg.conf.d/touchpad-tap.conf and add the following:
 #Add below text
 Section "InputClass"
