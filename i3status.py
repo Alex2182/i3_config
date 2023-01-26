@@ -8,27 +8,17 @@ from i3pystatus.updates import pacman, cower
 
 status = Status()
 
-# Displays clock like this:
-# Tue 30 Jul 11:59:46 PM KW31
-#                          ^-- calendar week
-
-#status.register("updates",
-#    format = "Updates: {count}",
-#    format_no_updates = "",
-#    on_leftclick="termite --geometry=1200x600 --title=updates -e 'pacaur --needed --noconfirm --noedit -Syu'",
-#    backends = [pacman.Pacman(), cower.Cower()])
 status.register("xkblayout", layouts=["us", "ru"])
 
 status.register("clock",
     format=" %H:%M:%S",
     color='#C678DD',
-    interval=5,
-    on_leftclick="/usr/bin/gsimplecal",)
+    interval=5)
 
 status.register("clock",
     format="  %a %d-%m-%Y ",
     color='#61AEEE',
-    interval=1000,)
+    interval=1000)
 
 
 status.register("pulseaudio",
@@ -43,7 +33,7 @@ status.register("network",
     color_down="#EF2929",
     format_up=": {v4cidr}",
     format_down="",
-     interval=10)
+    interval=10)
 
 status.register("network",
     interface="wlan0",
@@ -72,40 +62,39 @@ status.register("battery",
     status={
         "DIS": " ",
         "CHR": "  ",
-        "FULL": "   ",
-},)
+        "FULL": "   "
+        }
+               )
 
 status.register("temp",
     interval=10,
     format=" {Package_id_0}°C",
     hints={"markup": "pango"},
     lm_sensors_enabled=True,
-    dynamic_color=True
-                )
+    dynamic_color=True)
 
 status.register("cpu_usage",
     on_leftclick="termite --title=htop -e 'htop'",
     format="  {usage}%",
-    interval=10,)
+    interval=10)
 
 status.register("mem",
     color="#56B6C2",
     warn_color="#E5E500",
     alert_color="#FF1919",
     format=" {avail_mem}/{total_mem} GB",
-    divisor=1073741824,)
+    divisor=1073741824)
 
 status.register("disk",
     color='#56B6C2',
     path="/home",
     on_leftclick="pcmanfm",
-    format=" {avail} GB",)
+    format=" {avail} GB")
 
 
 status.register("shell",
         format = "Tver {output}",
         command = "curl -k https://wttr.in/Tver?format=2",
-        interval=600
-)
+        interval=600)
 
 status.run() 
