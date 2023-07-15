@@ -14,15 +14,15 @@ sudo setupcon
 # make changes
 ```bash
 sudo setupcon -k -f
-```
+```pip install git+https://github.com/bastienleonard/pysensors.git basiciw xkbgroup
 # 2 Enable tap for laptops
-Make a new file [touchpad-tap.conf](https://github.com/Alex2182/i3_config/blob/main/touchpad_tap.conf)
-```bash
+Make a new file [touchpad-tap.conf](https://github.com/Alex2182/i3_config/blob/main/touchpad_tap.conf)pip install git+https://github.com/bastienleonard/pysensors.git basiciw xkbgroup
+```bashpip install git+https://github.com/bastienleonard/pysensors.git basiciw xkbgroup
 sudo nano /etc/X11/xorg.conf.d/touchpad-tap.conf
 ```
 and add the following:
 
-Add below text
+Add below textpip install git+https://github.com/bastienleonard/pysensors.git basiciw xkbgroup
 ```bash
 Section "InputClass"
         Identifier "libinput touchpad catchall"
@@ -43,7 +43,7 @@ sudo apt install arandr autorandr j4-dmenu-desktop \
 python3-pip lm-sensors git curl nitrogen flameshot \
 libsensors4-dev libiw-dev i3lock-fancy i3pystatus i3 fonts-font-awesome
 pip install -U pip setuptools
-pip install git+https://github.com/bastienleonard/pysensors.git basiciw xkbgroup
+pip install git+https://github.com/bastienleonard/pysensors.git basiciw xkbgroup psutil
 ```
 # 5 Place [i3pystatus config file](https://github.com/Alex2182/i3_config/blob/main/i3status.py) to ~/.config/i3/. Same for [i3 config file](https://github.com/Alex2182/i3_config/blob/main/config)
 
