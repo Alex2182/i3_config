@@ -27,7 +27,7 @@ sudo nano /etc/X11/xorg.conf.d/touchpad-tap.conf
 ```
 and add the following:
 
-Add below textpip install git+https://github.com/bastienleonard/pysensors.git basiciw xkbgroup
+Add below text
 ```bash
 Section "InputClass"
         Identifier "libinput touchpad catchall"
