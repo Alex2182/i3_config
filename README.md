@@ -7,6 +7,13 @@ Config i3+i3status.py for quick start on new instalation (Debian based)
 XKBLAYOUT="us" add ",ru"
 XKBOPTIONS="" add "grp:alt_shift_toggle"
 
+You can also create a new file under /etc/sudoers.d name it as you wish(I named it 'shutdown'), and put the following lines inside:
+
+# Allows me to shutdown the system without a password
+
+yourUserName ALL = NOPASSWD: /sbin/halt, /sbin/reboot, /sbin/poweroff
+
+
 # test configuration
 ```bash
 sudo setupcon
@@ -14,10 +21,9 @@ sudo setupcon
 # make changes
 ```bash
 sudo setupcon -k -f
-```pip install git+https://github.com/bastienleonard/pysensors.git basiciw xkbgroup
+
 # 2 Enable tap for laptops
-Make a new file [touchpad-tap.conf](https://github.com/Alex2182/i3_config/blob/main/touchpad_tap.conf)pip install git+https://github.com/bastienleonard/pysensors.git basiciw xkbgroup
-```bashpip install git+https://github.com/bastienleonard/pysensors.git basiciw xkbgroup
+Make a new file [touchpad-tap.conf](https://github.com/Alex2182/i3_config/blob/main/touchpad_tap.conf)
 sudo nano /etc/X11/xorg.conf.d/touchpad-tap.conf
 ```
 and add the following:
