@@ -10,7 +10,6 @@ XKBOPTIONS="" add "grp:alt_shift_toggle"
 You can also create a new file under /etc/sudoers.d name it as you wish(I named it 'shutdown'), and put the following lines inside:
 
 # Allows me to shutdown the system without a password
-
 yourUserName ALL = NOPASSWD: /sbin/halt, /sbin/reboot, /sbin/poweroff
 
 
