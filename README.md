@@ -50,6 +50,13 @@ libsensors4-dev libiw-dev i3lock-fancy i3pystatus i3 fonts-font-awesome
 pip install -U pip setuptools
 pip install git+https://github.com/bastienleonard/pysensors.git basiciw xkbgroup psutil
 ```
+---
+On any issue with pip 
+do this
+```bash
+sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
+```
+---
 # 5 Place [i3pystatus config file](https://github.com/Alex2182/i3_config/blob/main/i3status.py) to ~/.config/i3/. Same for [i3 config file](https://github.com/Alex2182/i3_config/blob/main/config)
 
 
