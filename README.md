@@ -44,7 +44,7 @@ sudo chmod +s /usr/bin/light
 ```
 # 4 Prepare for i3wm installation
 ```bash
-sudo apt install arandr autorandr j4-dmenu-desktop \
+sudo apt install suckless-tools arandr autorandr j4-dmenu-desktop \
 python3-pip python3-dev lm-sensors git curl nitrogen flameshot \
 libsensors4-dev libiw-dev i3lock-fancy i3pystatus i3 fonts-font-awesome
 pip install -U pip setuptools
