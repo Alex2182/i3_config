@@ -20,9 +20,10 @@ sudo setupcon
 # make changes
 ```bash
 sudo setupcon -k -f
-
+```
 # 2 Enable tap for laptops
 Make a new file [touchpad-tap.conf](https://github.com/Alex2182/i3_config/blob/main/touchpad_tap.conf)
+```bash
 sudo nano /etc/X11/xorg.conf.d/touchpad-tap.conf
 ```
 and add the following:
