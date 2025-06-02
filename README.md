@@ -71,3 +71,6 @@ Add lines
 [Settings]
 gtk-application-prefer-dark-theme=1
 ```
+# 6 My fish prompts left and right
+(fish prompt)[https://github.com/Alex2182/i3_config/edit/main/fish_prompt.fish]
+(fish right prompt)[https://github.com/Alex2182/i3_config/edit/main/fish_right_prompt.fish]
