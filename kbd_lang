@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+kbd=$(xset q | grep LED | awk -F ' ' '{print $10}' | cut -c 1-5)
+# echo $kbd
+if [ $kbd -eq '00000' ]; then
+	echo US
+else
+	echo RU
+fi
