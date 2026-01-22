@@ -11,12 +11,11 @@
 
 set $mod Mod4
 workspace_layout tabbed
-title_align center
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font pango:monospace 10
-font pango:Terminess Nerd Font Mono 14
+font pango:3270 Nerd Font 14
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -24,6 +23,7 @@ font pango:Terminess Nerd Font Mono 14
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id dunst -c .config/dunst/dunstrc
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -35,7 +35,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xset s off -dpms
 
 #Lock screen
-bindsym $mod+Ctrl+l exec --no-startup-id i3lock -B 10 -k -f --keylayout 0 --layout-color aaffaa --time-color ffffff --date-color ffffff --date-str="%A" && playerctl --player=mpv pause
+bindsym $mod+Ctrl+l exec --no-startup-id dm-tool lock
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -48,13 +48,14 @@ exec --no-startup-id nm-applet
 
 #Telegram autostart
 # exec Telegram -startintray
+# Yandex cloud client for Obsidian backups
+exec --no-startup-id yandex-disk start
 
 #Wallpapers set
-exec --no-startup-id bash -c ~/.config/i3/scripts/wallpaper
-#sleep 5 && nitrogen --restore
+exec --no-startup-id sleep 4 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3blocks
+set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
@@ -114,8 +115,8 @@ bindsym Mod1+Tab focus right
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move right
-#bindsym $mod+Shift+l move up
-#bindsym $mod+Shift+semicolon move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move down
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -141,7 +142,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 # bindsym $mod+a focus parent
@@ -196,7 +197,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 # power menu
-bindsym $mod+Shift+e exec "bash -c ~/.config/i3/scripts/power_menu"
+bindsym $mod+Shift+e exec "bash -c ~/.config/i3/scripts/powermenu"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -232,9 +233,9 @@ bindsym $mod+r mode "resize"
 #	status_command i3status
 #}
 # class                 border  bground text    indicator child_border
-client.focused          #ffffff #ffffff #000000 #6272A4   #6272A4
-client.focused_inactive #ffffff #aaaaaa #000000 #44475A   #44475A
-client.unfocused        #ffffff #000000 #ffffff #282A36   #282A36
+client.focused          #6F8F8F #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #6F8F8F #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #BFBFBF #282A36 #BFBFBF #282A36   #282A36
 client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
 client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
@@ -250,18 +251,18 @@ bar {
     strip_workspace_numbers yes
     strip_workspace_name no
     #i3bar_command i3bar --transparency
-    font pango: Terminess Nerd Font Propo 16
+    font pango: 3270 Nerd Font 18
     #Noto Sans Regular 12
     #3270 Nerd Font 16
     colors {
-        background #000000
-        statusline #f8f8f2
-        separator #d81af4
+    background #000000
+    statusline #f8f8f2
+    separator #009999
 
-        focused_workspace  #ffffff #ffffff #000000
-        active_workspace   #000000 #000000 #ffffff
-        inactive_workspace #000000 #000000 #ffffff
-        urgent_workspace   #ff5555 #ff5555 #000000
-        binding_mode       #ff5555 #ff5555 #f8f8f2
+    focused_workspace  #ffffff #ffffff #000000
+    active_workspace   #000000 #000000 #ffffff
+    inactive_workspace #000000 #000000 #ffffff
+    urgent_workspace   #ff5555 #ff5555 #000000
+    binding_mode       #ff5555 #ff5555 #f8f8f2
     }
     }
