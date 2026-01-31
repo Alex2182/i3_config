@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+playerctl -p mpv metadata --format "{{ artist }} ({{ duration(mpris:length - position) }})"
