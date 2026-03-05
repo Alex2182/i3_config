@@ -44,7 +44,7 @@ exec --no-startup-id dunst -c .config/dunst/dunstrc
 exec --no-startup-id xset s off -dpms
 
 #Lock screen
-bindsym $mod+Ctrl+l exec --no-startup-id i3lock -fk
+bindsym $mod+Ctrl+l exec --no-startup-id ~/.config/i3/scripts/blur-lock
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
