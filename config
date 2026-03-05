@@ -11,6 +11,15 @@
 
 set $mod Mod4
 workspace_layout tabbed
+# Assign apps to workspace
+assign [class="discord"] $ws2
+assign [class="Telegram"] $ws2
+assign [class="firefox"] $ws3
+assign [class="brave-browser"] $ws3
+assign [class="obsidian"] $ws3
+assign [class="postman"] $ws1
+assign [class="DBeaver"] $ws1
+
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -35,7 +44,7 @@ exec --no-startup-id dunst -c .config/dunst/dunstrc
 exec --no-startup-id xset s off -dpms
 
 #Lock screen
-bindsym $mod+Ctrl+l exec --no-startup-id dm-tool lock
+bindsym $mod+Ctrl+l exec --no-startup-id i3lock -fk
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -233,9 +242,9 @@ bindsym $mod+r mode "resize"
 #	status_command i3status
 #}
 # class                 border  bground text    indicator child_border
-client.focused          #6F8F8F #6272A4 #F8F8F2 #6272A4   #6272A4
-client.focused_inactive #6F8F8F #44475A #F8F8F2 #44475A   #44475A
-client.unfocused        #BFBFBF #282A36 #BFBFBF #282A36   #282A36
+client.focused          #88C0D0 #88C0D0 #2E3440 #6272A4   #88C0D0
+client.focused_inactive #88C0D0 #44475A #88C0D0 #44475A   #88C0D0
+client.unfocused        #88C0D0 #2E3440 #88C0D0 #282A36   #88C0D0
 client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
 client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
@@ -255,13 +264,13 @@ bar {
     #Noto Sans Regular 12
     #3270 Nerd Font 16
     colors {
-    background #000000
-    statusline #f8f8f2
-    separator #009999
+    background #2E3440
+    statusline #88C0D0
+    separator #FFFFFF
 
-    focused_workspace  #ffffff #ffffff #000000
-    active_workspace   #000000 #000000 #ffffff
-    inactive_workspace #000000 #000000 #ffffff
+    focused_workspace  #88C0D0 #88C0D0 #2E3440
+    active_workspace   #2E3440 #2E3440 #88C0D0
+    inactive_workspace #2E3440 #2E3440 #88C0D0
     urgent_workspace   #ff5555 #ff5555 #000000
     binding_mode       #ff5555 #ff5555 #f8f8f2
     }
